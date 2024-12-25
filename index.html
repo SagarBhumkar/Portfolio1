@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sagar Bhumkar Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbc35;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Sagar Bhumkar</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#achievement-section" class="nav-link"><span>Achievements</span></a></li>
+
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Sagar Bhumkar</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Coder  ',
+						'Engineer  ',
+						'Fullstack Developer   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Software Developer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> 
+							<a href="https://github.com/rishabhnmishra" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Sagar Bhumkar</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Software Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>2 Years, 4 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Maharashta, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>C#</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>ASP.NET Core</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>MVC</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>ADO.Net</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a seasoned .NET Full Stack Developer with over 2+ years of experience in designing and developing scalable web applications. My expertise lies in C#, ASP.NET, Angular, WPF, UI Automation and SQL Server. I am passionate about creating efficient, innovative solutions that drive business success. Throughout my career, I have successfully led numerous projects from conception to deployment, always prioritizing user experience and robust functionality. My strong problem-solving skills and ability to adapt to new technologies enable me to stay ahead in the ever-evolving tech landscape. I thrive in collaborative environments and am always eager to contribute to team success while continuously enhancing my own skills.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>.Net FullStack Developer</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
+									<li class="d-flex"><span>specialization:</span> <span>Electroics And Telecommunication</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi</span></li>
+									<li class="d-flex"><span>Front End:</span> <span>HTML5, CSS3, Bootstrap, Angular 14, JavaScript, jQuery</span></li>
+									<li class="d-flex"><span>Tools:</span> <span>Visual Studio, SQL Server Management Studio</span></li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<!-- <p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p> -->
+								<p><a href="https://www.linkedin.com/in/sagar-bhumkar-22122001ssb/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Seasoned Software Developer with 2+ years of experience in developing and delivering innovative software solutions across multiple projects. Skilled in C# .NET technologies, including ASP.NET MVC5, Web API, ADO.NET, and Entity Framework, with a strong understanding of OOP concepts and implementation. Proficient in SQL Server 2019, HTML5, CSS3, JavaScript, jQuery, and Angular14. Experienced in the full software development life cycle using Agile Scrum methodologies, with a focus on problem-solving, analytical thinking, and efficient decision-making. Adept at quickly learning new technologies to meet project needs, and able to communicate effectively in collaborative team environments.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-Present</span>
+						<h2>Quatrro Business Support Services</h2>
+						<span class="position">Software Developer</span>
+						<p><strong>PROJECT EXPERIENCE </strong></p>
+						<p><strong>Project: XPort</strong></p>
+						<p><strong>Project: Xport - Invoice-Based Account and Transaction Management System</strong></p>
+						<p><strong>Overview:</strong><br>
+						The Xport project is a robust software solution designed to streamline and automate invoice-based account and transaction management for businesses. It allows users to manage accounts, track financial transactions, generate invoices, and ensure seamless integration with external payment gateways for real-time updates.</p>
+						
+						<p><strong>Key Features:</strong></p>
+						<ul>
+							<li>Account Management: Developed a comprehensive account management system that allows users to create, update, and manage business accounts with detailed transaction histories.</li>
+							<li>Invoice Generation: Designed an invoice generation system capable of creating, editing, and tracking invoices for various transactions, with custom templates and payment tracking.</li>
+							<li>Transaction Management: Integrated features to track and categorize all business transactions, including payments, receipts, and refunds, with automatic calculations of balances.</li>
+							<li>Real-Time Payments: Implemented integration with third-party payment gateways, enabling real-time payment processing and transaction updates.</li>
+							<li>Account Reconciliation: Developed automated reconciliation features for matching invoices with payments, ensuring accurate financial reporting.</li>
+							<li>Reporting: Built reporting tools to provide detailed insights into transaction history, invoice status, and overall financial performance.</li>
+							<li>Admin Dashboard: Designed an administrative dashboard with advanced reporting and real-time account transaction monitoring.</li>
+							<li>Security: Implemented strong authentication and role-based access control for ensuring data security and privacy of financial records.</li>
+						</ul>
+						
+						<p><strong>TECHNOLOGIES USED:</strong><br>
+						HTML5, CSS3, Bootstrap, JavaScript, jQuery, Ajax, Angular, C#, ASP.NET, .NET, MVC5, Entity Framework, SQL Server, MySQL.
+						</p>
+
+						<p><strong>Project: Cost Allocation - Financial Management System</strong></p>
+						<p><strong>Overview:</strong><br>
+						The Cost Allocation project is a comprehensive financial management system designed to allocate costs and expenses across different departments, projects, and business units. Similar to Zoho’s cost allocation features, this system automates the distribution of costs, tracks budgets, and generates reports for accurate financial decision-making and business performance analysis.</p>
+
+						<p><strong>Key Features:</strong></p>
+						<ul>
+							<li>Cost Distribution: Developed an automated system for allocating costs to various business units, departments, and projects based on predefined rules and criteria.</li>
+							<li>Budget Management: Implemented a budgeting system to set and monitor budgets for different units, allowing for real-time budget tracking and alerts for overspending.</li>
+							<li>Expense Tracking: Designed a system to track and categorize all expenses in real-time, with detailed reports for transparency and auditing.</li>
+							<li>Data Import/Export: Integrated features for importing and exporting financial data from multiple sources, allowing seamless integration with accounting systems and third-party platforms.</li>
+							<li>Cost Allocation Rules: Developed customizable rules for cost allocation based on various factors such as revenue, headcount, square footage, or other business metrics.</li>
+							<li>Reporting and Analytics: Built reporting tools for generating detailed financial statements, cost breakdowns, and performance analysis to aid in financial planning and decision-making.</li>
+							<li>Admin Dashboard: Designed an admin dashboard to provide a high-level view of cost allocation, budget status, and financial health of the organization.</li>
+							<li>Audit and Compliance: Implemented features for tracking changes, ensuring compliance with accounting standards, and providing audit trails for financial operations.</li>
+						</ul>
+
+						<p><strong>TECHNOLOGIES USED:</strong><br>
+						HTML5, CSS3, Bootstrap, JavaScript, jQuery, Ajax, Angular, C#, ASP.NET, .NET, MVC5, Entity Framework, SQL Server, MySQL.
+						</p>
+
+						<p><strong>Project: TAMS - Daily Import Data and Invoice Management System</strong></p>
+						<p><strong>Overview:</strong><br>
+						The TAMS (Transaction and Account Management System) project is designed to support the daily import of data, enabling the creation and management of invoices for specific stores and locations. The system automates data import processes and integrates invoice creation based on the imported data, assigning it to corresponding users, stores, and locations to streamline accounting and transaction tracking.</p>
+
+						<p><strong>Key Features:</strong></p>
+						<ul>
+							<li>Daily Data Import: Developed a system to automate the daily import of transactional data, ensuring seamless updates to the database for invoice creation.</li>
+							<li>Invoice Generation: Integrated an invoice creation module that automatically generates invoices based on imported data for specific stores and locations, ensuring accurate and timely financial records.</li>
+							<li>Store and Location Mapping: Implemented a feature to link each imported transaction to a specific store and location, providing clarity on the origin of transactions for accurate invoice generation.</li>
+							<li>User Assignment: Assigned each invoice to the corresponding user based on store and location, ensuring that users can access and manage their specific invoicing data.</li>
+							<li>Invoice Validation: Developed validation rules to ensure that all invoice data is accurate, such as matching store locations, transaction details, and invoice amounts.</li>
+							<li>Reporting: Built reporting functionality that enables users to generate detailed reports for each store and location, providing insights into transactions and invoicing trends.</li>
+							<li>Data Integration: Integrated the system with external APIs for real-time data import from third-party sources, ensuring up-to-date and accurate transaction information.</li>
+							<li>Audit Trail: Implemented audit functionality to track changes in invoice data, user actions, and transaction history for accountability and transparency.</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-2022</span>
+						<h2>Softra System Pvt. Ltd</h2>
+						<span class="position">Software Developer</span>
+						<p class="mt-4"> 
+
+							</p>
+							<p><strong>PROJECT EXPERIENCE</strong></p>
+							<p><strong>Project: Energy Retailers Management System (ERMS)</strong></p>
+							<p><strong>Overview:</strong><br>
+							The Energy Retailers Management System (ERMS) is a comprehensive software solution designed to streamline the operations of energy retailers. The system provides a platform for managing various aspects of energy retail services, including customer management, billing, product cataloguing, usage monitoring, and customer support.</p>
+							
+							<p><strong>Key Features:</strong></p>
+							<ul>
+								<li>Customer Management: Implemented a robust customer management system allowing for the registration, authentication, and profile management of customers.</li>
+								<li>Billing System: Designed a billing system capable of generating invoices, processing payments, and managing billing cycles for different energy services.</li>
+								<li>Product Catalog: Developed a product catalogue to showcase available energy plans, rates, and promotions, providing customers with transparency and choice.</li>
+								<li>Usage Monitoring: Integrated features for monitoring energy usage, allowing customers to track their consumption patterns and make informed decisions.</li>
+								<li>Customer Support: Implemented a ticketing system for handling customer inquiries, complaints, and support requests efficiently.</li>
+								<li>Admin Dashboard: Developed an administrative dashboard with role-based access control, enabling administrators to manage customers, products, billing, and support tickets.</li>
+								<li>Integration with External Systems: Integrated external APIs for fetching real-time energy data, facilitating seamless integration with third-party systems.</li>
+							</ul>
+							
+							<p><strong>TECHNOLOGIES USED:</strong><br>
+							HTML5, CSS3, Bootstrap, JavaScript, jQuery, Ajax, Angular, C#, ASP.NET, .NET, MVC5, Entity Framework, SQL Server, MySQL.
+							</p>
+							
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2023</span>
+    					<h2>Bachelor of Technology: E&TC</h2>
+    					<span class="position">Punyashlok Ahilyadevi Holkar Solapur University</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2016-2018</span>
+    					<h2>Diploma: E&TC</h2>
+    					<span class="position">Maharashtra State Board of Technical Education</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/uc?export=download&id=1MWJlnzwMZ-wGyTvmPRax0QgDT-_PEHkL" class="btn btn-primary py-4 px-5" download>Download CV</a></p>
+				</div>
+			</div>
+			
+			
+			
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the some Web based Project on .Net framework.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="#">XPort - Invoice-Based Account and Transaction Management System</a></h3>
+						<p>Streamlined and automated invoice-based account and transaction management for businesses, focusing on invoice generation, account reconciliation, and real-time payment integration.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="#">Cost Allocation - Financial Management System</a></h3>
+						<p>Designed a comprehensive financial management system to automate cost allocation across departments, with budgeting, expense tracking, and reporting features for better financial decision-making.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry">
+					<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="#">TAMS - Daily Import Data and Invoice Management System</a></h3>
+						<p>Developed a system to automate daily data import, create invoices for specific stores, and assign them to users, ensuring accurate financial records and efficient transaction tracking.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading"><a href="#">Energy Retailers Management System (ERMS)</a></h3>
+						<p>Implemented a comprehensive solution for managing customer accounts, billing, energy usage, product catalogs, and customer support in the energy retail sector.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+
+	<section class="ftco-section achievement-section ftco-no-pb" id="achievement-section">
+		<div class="container">
+		  <div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Achievement</h1>
+			  <h2 class="mb-4">Achievement</h2>
+			</div>
+		  </div>
+		  <div class="row g-4 justify-content-center mt-5"> 
+			<div class="col-md-4">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2023</span>
+				<h2>Published Research Paper</h2>
+				<span class="position">Journal of Image Processing and Intelligent Remote Sensing (JIPIRS)</span>
+				<p class="mt-4">Published the paper “Wireless Hand Gesture Control Robot with Object Detection” in JIPIRS, VOL.3 NO.4 (2023): June-July 2023.</p>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2023</span>
+				<h2>Holder of 2 Patents</h2>
+				<span class="position">Innovative Solutions</span>
+				<p class="mt-4">Successfully patented two innovative solutions that showcase my dedication to technological advancement:</p>
+				<ul class="mt-2">
+				  <li>Automation in Gardening with Smart Water Supply (Applicant No. 202321052177), published in Journal Number-39/2023, Journal Date: 29/09/2023 by the Indian Patent Organization.</li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2021</span>
+				<h2>11th University Ranker</h2>
+				<span class="position">B.Tech 2nd Year</span>
+				<p class="mt-4">Achieved 11th rank at the university level during the 2nd year of my Bachelor of Technology degree.</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+	  
+	  
+	  
+
+		<!-- <div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br> -->
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Maharashta, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 7385039963</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:sagar.bhumkar2212@gmail.com">sagar.bhumkar2212@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+					<span class="icon-globe"></span>
+				</div>
+				<h3 class="mb-4">Download Resume</h3>
+				<p><a href="https://drive.google.com/uc?export=download&id=1MWJlnzwMZ-wGyTvmPRax0QgDT-_PEHkL" class="btn btn-primary py-2 px-4" download>Download CV</a></p>
+			</div>
+		</div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/hTZU5riqZutQPX4R8" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sagar-bhumkar-22122001ssb/"><span class="icon-linkedin"></span></a></li>  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/er_sagar__bhumkar/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
