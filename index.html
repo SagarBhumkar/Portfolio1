@@ -161,9 +161,9 @@
 
 						// Create an array of typing text
 						const typingTexts = [
-						'Coder  ',
-						'Engineer  ',
-						'Fullstack Developer   ',
+						'Full Stack Developer',
+						'Programmer',
+						'Software Engineer',
 						];
 
 						// Create a function to display the typing animation for a given text
@@ -189,7 +189,7 @@
 
 						<br>
 						<br>
-			            <h2>Software Developer</h2>
+			            <!-- <h2>Software Developer</h2> -->
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> 
@@ -221,23 +221,42 @@
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Sagar Bhumkar</span></p>
+										<p><span class="title-s">Name: </span> <span>Sagar Santosh Bhumkar</span></p>
 										<p><span class="title-s">Job Role: </span> <span>Software Developer</span></p>
-										<p><span class="title-s">Experience: </span> <span>2 Years, 4 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Maharashta, India</span></p>
+										<p><span class="title-s">Experience: </span> <span id="experience"></span></p>
+										<p><span class="title-s">Address: </span> <span>Maharashtra, India</span></p>
 									  </div>
+									  <script>
+										function calculateExperience(startDate) {
+											const start = new Date(startDate);
+											const now = new Date();
+									
+											let years = now.getFullYear() - start.getFullYear();
+											let months = now.getMonth() - start.getMonth();
+									
+											if (months < 0) {
+												years--;
+												months += 12;
+											}
+									
+											return `${years} Years, ${months} Months`;
+										}
+									
+										document.getElementById("experience").textContent = calculateExperience("2022-07-25");
+									</script>
 									</div>
 								  </div>
+								  
 
 								<div class="skill-mf">
 									<p class="title-s">Skills</p>
-									<span>C#</span> <span class="pull-right">95%</span>
+									<span>C#</span> <span class="pull-right">90%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>SQL</span> <span class="pull-right">75%</span>
+									<span>SQL</span> <span class="pull-right">70%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
 											aria-valuemax="100"></div>
@@ -277,7 +296,7 @@
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Profile:</span> <span>.Net FullStack Developer</span></li>
 									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
-									<li class="d-flex"><span>specialization:</span> <span>Electroics And Telecommunication</span></li>
+									<li class="d-flex"><span>Specialization:</span> <span>Electroics And Telecommunication</span></li>
 									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi</span></li>
 									<li class="d-flex"><span>Front End:</span> <span>HTML5, CSS3, Bootstrap, Angular 14, JavaScript, jQuery</span></li>
 									<li class="d-flex"><span>Tools:</span> <span>Visual Studio, SQL Server Management Studio</span></li>
@@ -400,13 +419,13 @@
 							<p><strong>PROJECT EXPERIENCE</strong></p>
 							<p><strong>Project: Energy Retailers Management System (ERMS)</strong></p>
 							<p><strong>Overview:</strong><br>
-							The Energy Retailers Management System (ERMS) is a comprehensive software solution designed to streamline the operations of energy retailers. The system provides a platform for managing various aspects of energy retail services, including customer management, billing, product cataloguing, usage monitoring, and customer support.</p>
+							The Energy Retailers Management System (ERMS) is a comprehensive software solution designed to streamline the operations of energy retailers. The system provides a platform for managing various aspects of energy retail services, including customer management, billing, product cataloging, usage monitoring, and customer support.</p>
 							
 							<p><strong>Key Features:</strong></p>
 							<ul>
 								<li>Customer Management: Implemented a robust customer management system allowing for the registration, authentication, and profile management of customers.</li>
 								<li>Billing System: Designed a billing system capable of generating invoices, processing payments, and managing billing cycles for different energy services.</li>
-								<li>Product Catalog: Developed a product catalogue to showcase available energy plans, rates, and promotions, providing customers with transparency and choice.</li>
+								<li>Product Catalog: Developed a product catalog to showcase available energy plans, rates, and promotions, providing customers with transparency and choice.</li>
 								<li>Usage Monitoring: Integrated features for monitoring energy usage, allowing customers to track their consumption patterns and make informed decisions.</li>
 								<li>Customer Support: Implemented a ticketing system for handling customer inquiries, complaints, and support requests efficiently.</li>
 								<li>Admin Dashboard: Developed an administrative dashboard with role-based access control, enabling administrators to manage customers, products, billing, and support tickets.</li>
@@ -431,25 +450,26 @@
 		</div>
 		<br>
 		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2018-2023</span>
-    					<h2>Bachelor of Technology: E&TC</h2>
-    					<span class="position">Punyashlok Ahilyadevi Holkar Solapur University</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2016-2018</span>
-    					<h2>Diploma: E&TC</h2>
-    					<span class="position">Maharashtra State Board of Technical Education</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2018-2023</span>
+					<h2>Bachelor of Technology: <br>Electronics And Telecommunication</h2>
+					<span class="position">Punyashlok Ahilyadevi Holkar Solapur University</span>
+					<p class="mt-4">Grade: First class distinction.</p>
 				</div>
-    		</div>
+			</div>
+		
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2016-2018</span>
+					<h2>Polytechnic: <br>Electronics And Telecommunication</h2>
+					<span class="position">Maharashtra State Board of Technical Education</span>
+					<p class="mt-4">Grade: First class distinction.</p>
+				</div>
+			</div>
+		</div>
+		
 
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-6 text-center ftco-animate">
@@ -499,7 +519,7 @@
 					<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
 					</a>
 					<div class="text mt-3 float-right d-block">
-						<h3 class="heading"><a href="#">TAMS - Daily Import Data and Invoice Management System</a></h3>
+						<h3 class="heading"><a href="#">TAMS - Invoice Trcaking Software </a></h3>
 						<p>Developed a system to automate daily data import, create invoices for specific stores, and assign them to users, ensuring accurate financial records and efficient transaction tracking.</p>
 					</div>
 				</div>
@@ -543,16 +563,24 @@
 			  </div>
 			</div>
 			<div class="col-md-4">
-			  <div class="resume-wrap ftco-animate">
-				<span class="date">2023</span>
-				<h2>Holder of 2 Patents</h2>
-				<span class="position">Innovative Solutions</span>
-				<p class="mt-4">Successfully patented two innovative solutions that showcase my dedication to technological advancement:</p>
-				<ul class="mt-2">
-				  <li>Automation in Gardening with Smart Water Supply (Applicant No. 202321052177), published in Journal Number-39/2023, Journal Date: 29/09/2023 by the Indian Patent Organization.</li>
-				</ul>
+				<div class="resume-wrap ftco-animate">
+				  <span class="date">2023</span>
+				  <h2>Holder of 2 Patents</h2>
+				  <span class="position">Innovative Solutions</span>
+				  <p class="mt-4">Successfully patented two innovative solutions that demonstrate my commitment to technological advancement:</p>
+				  <ul class="mt-2">
+					<li>
+					  Published in <em>The Patent Office Journal</em> No. 39/2023, dated 29/09/2023, under the title: 
+					  <strong>Wireless Hand Gesture Control Robot with Object Detection</strong>, Application No. 202321047533 A.
+					</li>
+					<li>
+					  Published in <em>The Patent Office Journal</em> No. 39/2023, dated 29/09/2023, under the title: 
+					  <strong>Automation in Gardening with Smart Water Supply</strong>, Application No. 202321052177 A.
+					</li>
+				  </ul>
+				</div>
 			  </div>
-			</div>
+			  
 			<div class="col-md-4">
 			  <div class="resume-wrap ftco-animate">
 				<span class="date">2021</span>
