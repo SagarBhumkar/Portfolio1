@@ -292,7 +292,7 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>I am a seasoned .NET Full Stack Developer with over 2+ years of experience in designing and developing scalable web applications. My expertise lies in C#, ASP.NET, Angular, WPF, UI Automation and SQL Server. I am passionate about creating efficient, innovative solutions that drive business success. Throughout my career, I have successfully led numerous projects from conception to deployment, always prioritizing user experience and robust functionality. My strong problem-solving skills and ability to adapt to new technologies enable me to stay ahead in the ever-evolving tech landscape. I thrive in collaborative environments and am always eager to contribute to team success while continuously enhancing my own skills.</p>
+								<p>I am a seasoned .NET Full Stack Developer with over <span id="experience1"></span> of experience in designing and developing scalable web applications. My expertise lies in C#, ASP.NET, Angular, WPF, UI Automation and SQL Server. I am passionate about creating efficient, innovative solutions that drive business success. Throughout my career, I have successfully led numerous projects from conception to deployment, always prioritizing user experience and robust functionality. My strong problem-solving skills and ability to adapt to new technologies enable me to stay ahead in the ever-evolving tech landscape. I thrive in collaborative environments and am always eager to contribute to team success while continuously enhancing my own skills.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Profile:</span> <span>.Net FullStack Developer</span></li>
 									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
@@ -302,6 +302,24 @@
 									<li class="d-flex"><span>Tools:</span> <span>Visual Studio, SQL Server Management Studio</span></li>
 
 								</ul>
+								<script>
+									function calculateExperience(startDate) {
+										const start = new Date(startDate);
+										const now = new Date();
+								
+										let years = now.getFullYear() - start.getFullYear();
+										let months = now.getMonth() - start.getMonth();
+								
+										if (months < 0) {
+											years--;
+											months += 12;
+										}
+								
+										return `${years} Years, ${months} Months`;
+									}
+								
+									document.getElementById("experience1").textContent = calculateExperience("2022-07-25");
+								</script>
 							</div>
 						</div>
 
@@ -561,17 +579,6 @@
 		  
 	  </section>
 	  
-	  
-	  
-	  
-
-		<!-- <div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br> -->
-
-
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
@@ -598,18 +605,20 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+91 7385039963</a></p>
+	            <p><a href="tel://7385039963">+91 7385039963</a></p>
 	          </div>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:sagar.bhumkar2212@gmail.com">sagar.bhumkar2212@gmail.com</a></p>
-	          </div>
-          </div>
+		  <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+					<span class="icon-paper-plane"></span>
+				</div>
+				<h3 class="mb-4">Email Address</h3>
+			  <p><a href="mailto:sagar.bhumkar2212@gmail.com">sagar.bhumkar2212@gmail.com</a></p>
+
+			</div>
+		</div>
+
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
 			<div class="align-self-stretch box p-4 text-center">
 				<div class="icon d-flex align-items-center justify-content-center">
